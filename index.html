@@ -7,10 +7,18 @@
     <title>Studio Ghibli</title>
     <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/jquery.stellar.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link 
+      rel="stylesheet" 
+      href="./css/mobile.css"
+      media="screen and (max-width: 767px)"
+    >
+    <link 
+      rel="stylesheet" 
+      href="./css/pc.css" 
+      media="screen and (min-width: 768px)"
+    >
 </head>
 <body>
     <header>
@@ -41,6 +49,10 @@
                 </li>
                 <li><a class="shop" href="#">Shop<span>&gt;</span></a></li>
             </ul>
+             <!-- 토글메뉴 -->
+            <button id="toggle">
+                <img src="./images/Vector.png" alt="menu">
+            </button>
         </nav>
     </header>
     <!-- 마녀배달부 키키  -->

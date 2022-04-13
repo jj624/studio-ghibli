@@ -43,12 +43,9 @@ header .logo {
 }
 
 /* gnb 2단계 */
-#gnb .depth2 {
-    background: #000;
-}
-
 #gnb .depth2 > li > a {
     font-size: 13px;
+    transition: 0.3s;
 }
 
 
@@ -58,6 +55,16 @@ header .logo {
 
 #gnb .depth2 > li > a:hover {
     color: #5FB4C9;
+}
+
+#gnb .depth2 > li {
+    margin-top: 10px;
+}
+
+#gnb .depth2 {
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -91,13 +98,18 @@ header .logo {
 }
 
 /* 2단계 메뉴 액션 */
-#gnb .depth2 {
-    display: none;
-    margin-top: 1em;
-}
 
 #gnb .depth2.on {
-    display: block;
+    height: 100px;
+    opacity: 1;
+}
+
+#gnb .depth2 {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    margin-top: 1em;
 }
 
 #gnb .depth2 > li {
@@ -120,15 +132,15 @@ header .logo {
 }
 
 #kiki {
-    background-image: url(./images/kiki_bg.jpg);
+    background-image: url(../images/kiki_bg.jpg);
 }
 
 #ponyo {
-    background-image: url(./images/ponyo_bg.jpg);
+    background-image: url(../images/ponyo_bg.jpg);
 }
 
 #bobble {
-    background-image: url(./images/bobble_bg.jpg);
+    background-image: url(../images/bobble_bg.jpg);
 }
 
 .section-bg .title-group {
@@ -143,6 +155,12 @@ header .logo {
 
 .section-bg .title-group .section-nav a {
     color: #fff;
+    font-size: 18px;
+}
+
+.section-bg .title-group .section-nav a:hover {
+    color: #5FB4C9;
+    transition: 0.3s;
     font-size: 18px;
 }
 
@@ -195,4 +213,7 @@ footer .footer-nav > li {
     margin-left: 2em;
 }
 
-
+/* 토글버튼 */
+#toggle {
+    display: none;
+  }

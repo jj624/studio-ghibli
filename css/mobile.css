@@ -7,6 +7,8 @@
 }
 
 body {
+    width: auto;
+    margin: 0 auto;
     font-family: 'Hahmlet', serif;
     font-size: 16px;
     background: #ccc;
@@ -24,12 +26,14 @@ ul {
 /* header */
 header {
     background: #000;
-    height: 100px;
+    width: 100%;
+    height: 80px;
     position: relative;
 }
 
+
 header .logo {
-    width: 140px;
+    width: 100px;
     position: absolute;
     left: 30px;
     top: 15px;
@@ -43,10 +47,6 @@ header .logo {
 }
 
 /* gnb 2단계 */
-#gnb .depth2 {
-    background: #000;
-}
-
 #gnb .depth2 > li > a {
     font-size: 13px;
 }
@@ -61,29 +61,15 @@ header .logo {
 }
 
 
-#gnb {
-    position: absolute;
-    right: 30px;
-    top: 40px;
-}
 
-#gnb > ul > li {
-    float: left;
-    margin-left: 20px;
-    min-width: 100px;
-    text-align: center;
-}
 
-#gnb > ul > li:last-child {
-    width: auto;
-    margin-left: 30px;
-}
+
 
 /* shop 버튼 */
 #gnb .shop {
     background: #5FB4C9;
     display: block;
-    padding: 5px 50px 5px 20px;
+    padding: 5px 5px 5px 10px;
 }
 
 #gnb .shop span {
@@ -120,15 +106,15 @@ header .logo {
 }
 
 #kiki {
-    background-image: url(./images/kiki_bg.jpg);
+    background-image: url(../images/kiki_bg.jpg);
 }
 
 #ponyo {
-    background-image: url(./images/ponyo_bg.jpg);
+    background-image: url(../images/ponyo_bg.jpg);
 }
 
 #bobble {
-    background-image: url(./images/bobble_bg.jpg);
+    background-image: url(../images/bobble_bg.jpg);
 }
 
 .section-bg .title-group {
@@ -143,6 +129,12 @@ header .logo {
 
 .section-bg .title-group .section-nav a {
     color: #fff;
+    font-size: 18px;
+}
+
+.section-bg .title-group .section-nav a:hover {
+    color: #5FB4C9;
+    transition: 0.3s;
     font-size: 18px;
 }
 
@@ -196,3 +188,32 @@ footer .footer-nav > li {
 }
 
 
+/* 토글버튼 */
+#toggle {
+    background: transparent;
+    border-style: none;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+  }
+
+  #gnb > ul {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #000;
+    top: 80px;
+    padding: 20px;
+    display: none;
+  }
+  
+  #gnb > ul.on {
+    display: block;
+  }
+  
+  #gnb > ul > li {
+    display: block;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  
